@@ -1,0 +1,18 @@
+## Interface: 40000
+## Title: SecureQueue
+## Notes: Prevents accidental leaving of arena matches
+## Version: 1
+## Author: Dusknoir
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Events: UPDATE_BATTLEFIELD_STATUS
+## X-LoadOn-UPDATE_BATTLEFIELD_STATUS: AddonLoader:LoadAddOn("SafeQueue")
+
+## X-Credits: Jordon
+
+## X-License: GNU General Public License v3
+## X-License-URL: http://www.gnu.org/licenses/gpl.txt
+
+## X-Github: http://github.com/dusknoir/securequeue/
+
+main.lua

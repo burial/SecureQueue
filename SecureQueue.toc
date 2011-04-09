@@ -6,7 +6,7 @@
 
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Events: UPDATE_BATTLEFIELD_STATUS
-## X-LoadOn-UPDATE_BATTLEFIELD_STATUS: AddonLoader:LoadAddOn("SecureQueue")
+## X-LoadOn-UPDATE_BATTLEFIELD_STATUS: AddonLoader:LoadAddOn("SecureQueue") SecureQueue:GetScript("OnEvent")(SecureQueue)
 
 ## X-Credits: Jordon
 

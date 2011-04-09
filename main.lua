@@ -34,7 +34,7 @@ frame:SetScript("OnEvent", function(self)
                 end
 
                 if btn and not self.timer then
-                    self.timer = 20
+                    self.timer = 30
                     self.button = btn
                     self:SetScript("OnUpdate", self.OnUpdate)
                 end

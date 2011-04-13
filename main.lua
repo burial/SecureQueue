@@ -12,7 +12,7 @@ function frame:OnUpdate(delay)
     self.button:SetText(self.timer <= 15 and "|cffff0000" .. msg .. "|r" or msg)
 
     if self.timer <= 15 and not self.alerted then
-        PlaySoundFile([[Sound\Spells\Simongame_visual_badpress]])
+        PlaySoundFile([[Sound\Spells\Simongame_visual_badpress.wav]])
         self.alerted = true
     end
 

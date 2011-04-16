@@ -8,19 +8,20 @@ frame:RegisterEvent("UPDATE_BATTLEFIELD_STATUS")
 function frame:OnUpdate(delay)
     self.timer = self.timer - delay
 
+    if self.timer < 0 or IsActiveBattlefieldArena() then
+        self.timer = nil
+        self.button = nil
+        self.alerted = nil
+        self:SetScript("OnUpdate", nil)
+        return
+    end
+
     local msg = expires:format(self.timer)
     self.button:SetText(self.timer <= 15 and "|cffff0000" .. msg .. "|r" or msg)
 
     if self.timer <= 15 and not self.alerted then
         PlaySoundFile([[Sound\Spells\Simongame_visual_badpress.wav]])
         self.alerted = true
-    end
-
-    if self.timer < 0 then
-        self.timer = nil
-        self.button = nil
-        self.alerted = nil
-        self:SetScript("OnUpdate", nil)
     end
 end
 
